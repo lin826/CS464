@@ -8,7 +8,7 @@
 
 <div class="form">
 <table border ="1" class ="index"><tr><td colspan="2" class="tablehead"><h2>
-Welcome <?php echo $_SESSION['username']; ?>!</h2></tr></td><tr><td width="50%">
+Welcome <?php echo $_SESSION['username']; ?>!</h2><br/><a href="friendlist.php" class="button">Your Friend List</a> </p></td></tr></tr></td><tr><td width="50%">
 <?php
 $user = $_SESSION['username'];
 $sql = "select * from  `characters` where CharUserName='$user'";
@@ -35,7 +35,7 @@ $sql = "select * from  `characters` where CharUserName='$user'";
 	$array = mysqli_fetch_array($result);
 	 	 echo "<a href='displaychar.php?charnum=1'>".$array['CharName']."</a>";
 	 echo "<br/>Coins: ".$array['Coins'].",".$array['Gender']."<br/>";
-	 echo "<a href='delete(".$array['CharID'].")'>Delete this char</a>";;
+	 echo "<a href='delete(".$array['CharID'].")'>Delete this char</a>";
  }
  else{
 	 echo "<a href='createchar.php?charnum=0'>Start creating a character!</a></td><td><a href='createchar.php?charnum=0'>Start creating a character!</a>";
