@@ -22,11 +22,25 @@ value="male">Male<br/>
  SkinTone: <br/>
  HairStyle: <br/>
  Decorative Hair Style: <br/>
-
+ 
+  <input type="button" name="Next" onclick="$('#createachar2').show(); $('#charcreate').hide()" value="Next">
+ </div>
+ <div id="createachar2" style="display:none">
+ Step 2:<br/>
  Choose 3 Skills:
  "gathering","cooking","woodworking","blacksmithing","leatherworking","alchemy","architecture"<br/>
+  <input type="button" name="back" onclick="$('#charcreate').show(); $('#createachar2').hide()" value="Go Back">  
+  <input type="button" name="Next" onclick="$('#createachar3').show(); $('#createachar2').hide()" value="Next">
+ </div>
  
+ <div id="createachar3" style="display:none">
+ Step 3:<br/>
+ Choose a Hometown:
+ "Grecca", "Valle", "Scilla", "Crescent", "Pandora"<br/>
+
  
- <input type="button" name="submit" value="Create!">
+  <input type="button" onclick="$('#createachar2').show(); $('#createachar3').hide()" name="back" value="Go Back">
+  <input type="button" onclick="" name="submit" value="Create!">
+  </div>
  </form>
  </div>

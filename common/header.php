@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 
-    <title>Video Annotation WebApp | <!-- Do Something Smart Here --></title>
+    <title>CS464 Project! </title>
 
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn.css-tricks.com/favicon.ico" />
@@ -15,7 +15,7 @@
         <div id="header">
 
 
-            <h1><a href="../WebApp/index.php">Video Annotation WebApp </a></h1>
+            <h1><a href="../cs464/index.php">Video Game Add-on Project </a></h1>
 
 
 <div id="control">
