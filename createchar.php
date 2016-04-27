@@ -3,7 +3,16 @@ include('auth.php');
 ?>
 
 <script src="js/makechar.js"></script>
-
+<script>
+var gender="female";
+$(function(){
+  $('input[type="radio"]').click(function(){
+    if ($(this).is(':checked'))
+    {
+      gender=$(this).val();
+    }
+  });
+});</script>
 <div id="createachar">
  Hello <?php echo $_SESSION['username']?>!<br/>
  Create your first character:
@@ -17,11 +26,15 @@ value="female">Female
 <input type="radio" name="gender"
 <?php if (isset($gender) && $gender=="male") echo "checked";?>
 value="male">Male<br/>
- EyeColor: <br/>
- HairColor: <br/>
- SkinTone: <br/>
- HairStyle: <br/>
- Decorative Hair Style: <br/>
+ EyeColor: <select id="eyecolor"><option name="red">red</option>"hazel","green","blue","black","brown"</select><br/>
+ HairColor: "black","brown","blonde","red","grey","dirtyblonde"<br/>
+ SkinTone: "verydark","dark","tan","olive","pale","verypale"<br/>
+ HairStyle: "bald","bob", "abbz","braid","bun","butchy","greekish","long","ptail"<br/>
+ "bald","dreds","flat","merlhair","rassle","silan","spikey","straight","wavy"<br/>
+ Decorative Hair Style: "none","flippy","fullongface","paige"
+ <br/>
+"none","abelincoln","chinbeard","chinjacket","fumanchu","gandalf","grecco","leo","moostache"
+ <br/>
  
   <input type="button" name="Next" onclick="$('#createachar2').show(); $('#charcreate').hide()" value="Next">
  </div>
