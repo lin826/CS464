@@ -1,0 +1,205 @@
+﻿/*
+================================================================================
+    Main style sheet for Video Annotation platform.
+
+    Class: ECE 435, 419, 420
+    
+    Collaboration between Senior Design and Software Engineering
+================================================================================
+*/
+
+html {
+    background: rgb(255, 255, 255);
+    color: rgb(35, 35, 35);
+    overflow: auto;
+    overflow-x:0;
+}
+
+body {
+    font-size: 1em;
+    font-weight: normal;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: normal;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size-adjust: 0.58;
+    line-height: 1.4em;
+    text-align: center;
+    overflow:hidden;    width: 75%;
+    height: 100%;
+    padding:0;
+        margin:0;
+}
+head{
+	font-size: 1em;
+    font-weight: normal;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: normal;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size-adjust: 0.58;
+    line-height: 1.4em;
+    text-align: center;
+    overflow:hidden;    width: 75%;
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+
+video {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main {
+    width: 65%;
+    height: 100%;
+    padding: 1.5em;
+    margin-left: 0px;
+    margin-right: 1.5em;
+    position: fixed;
+    left: 25%;
+    top: 0px;
+    text-align: center;
+    /*border: 1px solid blue;*/
+}
+
+.video-div {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    /*border: 1px solid green;*/
+
+}
+
+.canvases {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 90%;
+}
+
+.input-area {
+    position: relative;
+    width: inherit;
+    text-align: left;
+    position: relative;
+    padding: inherit;
+    margin: inherit;
+}
+
+.annotation-list {
+	position: absolute;
+	right:5px;
+	top: 25%;
+    width: 24%;
+    max-height: 30em;
+    text-align: left;
+    padding: inherit;
+    margin: inherit;
+     overflow-y: scroll;
+}
+
+.index{
+	margin: 0 auto;
+	
+}
+
+.tdl{
+	height:100px;
+	width:350px;
+	text-align: left;
+	vertical-align:top;
+}
+
+.tablehead{
+	height:45px;
+	width:350px;
+	text-align: left;
+	vertical-align:top;
+}
+.usermanagement{
+	height:45px;
+	width:80%;
+	text-align: left;
+	vertical-align:top;
+	margin: 0 auto;
+}
+
+.tdr{
+	height:100px;
+	width:350px;
+	text-align: right;
+	vertical-align:top;
+}
+
+.save-annots {
+	position: absolute;
+	right:5px;
+	bottom: 5%;
+    width: 24%;
+    max-height: 30em;
+    text-align: center;
+    padding: inherit;
+    margin: inherit;
+    overflow-y: hidden;
+}
+
+
+
+/*
+    HEADER
+*/
+#header { height: 50px; position: relative; }
+#header h1 { position: absolute; top: 0; left: 0; z-index: 2;  overflow: hidden; }
+#header h1 a { display: block; width: 100%; height: 38px; border: none; background: url(/images/logo.png) no-repeat; }
+#control { width: 500px; float: right; padding: 10px 0px 0 0; text-align: right; }
+
+/*
+    SIDEBAR
+*/
+#ribbon { position: absolute; right: 4px; width: 24%; top:10%; overflow:hidden; }
+
+#ribbon ul { list-style: none; }
+#ribbon ul li { background: rgba(0,0,0,0.8); color: white; padding: 5px; margin: 0 0 5px 0; font-size: 12px; }
+/*
+    FOOTER
+*/
+
+#footer {
+margin: 0px auto;
+width:100%;
+bottom: 0;
+overflow-x:0;
+}    
+#footer .copyright {
+float: left;
+padding: 30px 0;
+width: 100%;
+
+text-align: center;
+}
+
+#save
+	{
+	height:4em;
+	width:15em;
+}
+
+/*
+    RESET
+*/
+* { margin: 0; padding: 0; }
+body { font: 14px/1.1 Helvetica, Sans-Serif; overflow-x:0; }
+.clear { clear: both; }
+img, a img { border: none; }
+input { outline: none; }
