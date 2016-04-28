@@ -1,6 +1,6 @@
 <?php include_once "common/header.php"; ?>
 <?php
- require('/common/DBConnection/connection.php');
+ require($_SERVER['DOCUMENT_ROOT'].'/WebApp/common/DBConnection/connection.php');
  //require_once "Mail.php";
 
  // If form submitted, insert values into the database.
@@ -31,15 +31,13 @@
  
  $conf_code = md5(uniqid(rand()));
  
- $query = "INSERT into `accounts` (UserName, Password, Email) VALUES ('$username', '$password', '$email')";
+ $query = "INSERT into `ACCOUNTS` (UserName, Password, Email) VALUES ('$username', '$password', '$email')";
  $result = mysqli_query($link,$query);
  if($result){
-	echo "<div class='form'><h3>You are registered successfully. An admin will activate your account soon.</h3><br/></div>";
-	
+	echo "<div class='form'><h3>You are registered successfully.</h3><br/></div>";
  }
  else{
 	  echo "<div class='form'><h3>There was an error with your registration.</h3><br/>Click here to <a href='registration.php'>register</a></div>";
- 
 		throw new Exception(mysqli_error($link)."[ $result]");
  }}
  else{
