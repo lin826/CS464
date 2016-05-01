@@ -10,10 +10,29 @@ include('auth.php');
 	$charid = $array['CharID'];
 ?>
 
+<?php
+	// House and city
+$sql2 = "SELECT CityName,StrucID,CharName from structures inner join characters on characters.CharID = structures.CharIDOwns where structures.CharIDOwns in (Select CharID from characters
+where CharName='".$_GET['charnum']."')";
+$result=$link->query($sql2);
+if($result){
+	$res= mysqli_fetch_row($result);
+	$city= $res[0];
+	$housenum= $res[1];
+	$charn = $res[2];
+}
+else{
+	
+	throw new Exception(mysqli_error($link)."[ $result]");
+}
+?>
+
 <div id="displaychar">
- Hello <?php echo $_SESSION['username']?>!<br/>
- This is your character <?php echo $_SESSION['username']?>:
- Coins: <?php echo $array['Coins']?>, Gender: <?php echo $array['Gender']?>
+ <h2>Hello <?php echo $_SESSION['username']?>!</h2><br/>
+ This is your character <?php echo $_SESSION['username']?>:<br/>
+ Coins: <?php echo $array['Coins']?>, Gender: <?php echo $array['Gender']?><br/>
+ <a href="house.php?cid=<?=$housenum?>"> visit your house </a> <br/>
+ <a href="city.php?cid=<?=$city?>"> visit your city </a>
 
 
 
